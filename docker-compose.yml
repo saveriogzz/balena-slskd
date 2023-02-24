@@ -9,4 +9,7 @@ services:
       - 5030:5030
       - 5031:5031
       - 50300:50300
+    environment:
+      - SLSK_USR=bhsbvscbchcjb
+      - SLSK_PWD=d1e8348221e891ac77550822800
       # TODO: add volume for music if needed

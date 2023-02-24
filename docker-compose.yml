@@ -1,8 +1,8 @@
 version: "2"
 
 services:
-  slsdk:
-    build: ./slsdk
+  slskd:
+    build: ./slskd
     restart: always
     privileged: true
     ports:

@@ -1,0 +1,5 @@
+FROM slskd/slskd:0.17.4
+WORKDIR /slskd
+COPY ./slskd.yml /app/slskd.yml
+COPY ./start.sh ./start.sh
+CMD ["sh","start.sh"]

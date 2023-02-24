@@ -1,4 +1,6 @@
 version: '2'
+volumes:
+  minio:
 services:
   slskd:
     build: ./slskd
@@ -12,3 +14,11 @@ services:
       SLSK_USR:
       SLSK_PWD:
       # TODO: add volume for music if needed
+  minio:
+    build: ./minio
+    ports:
+     - 9000:9000
+     - 9090:9090
+     - 9001:9001
+    volumes:
+      - 'minio:/data'

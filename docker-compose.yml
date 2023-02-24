@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  slsdk:
+    restart: always
+    image: slskd/slskd:0.17.4
+    privileged: true
+    ports:
+      - 5030:5030
+      - 5031:5031
+      - 50300:50300

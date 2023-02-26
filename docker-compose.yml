@@ -13,6 +13,8 @@ services:
     environment:
       SLSK_USR:
       SLSK_PWD:
+    depends_on:
+      minio
       # TODO: add volume for music if needed
   minio:
     build: ./minio

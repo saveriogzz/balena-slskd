@@ -1,0 +1,27 @@
+name: balenaSlskd
+type: sw.application
+description: >-
+  Build a home server hosting Slskd (client-server application for the Soulseek file-sharing network) instance,
+  and MinIO (object storage S3 compatible)
+# fleetcta: Cool
+# post-provisioning: >-
+#   ## Usage instructions
+assets:
+  repository:
+    type: blob.asset
+    data:
+      url: 'https://github.com/saveriogzz/balena-slskd'
+  # logo:
+  #   type: blob.asset
+  #   data:
+  #     url: >-
+  #       https://raw.githubusercontent.com/balena-slskd.......
+data:
+  applicationEnvironmentVariables:
+    - VAR1: YES
+    - VAR2: NO
+  defaultDeviceType: raspberrypi4-64
+  supportedDeviceTypes:
+    - raspberrypi4-64
+    # - raspberrypi400-64 not-tested
+version: 0.0.1

@@ -1,0 +1,5 @@
+FROM balenalib/raspberrypi4-64:sid
+RUN install_packages wget && \
+  wget https://dl.min.io/server/minio/release/linux-arm64/minio && \
+  chmod +x minio
+ENTRYPOINT ["./minio", "server", "/mnt/data", "--console-address", ":9001"]

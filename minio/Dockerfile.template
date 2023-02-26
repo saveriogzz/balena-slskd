@@ -1,4 +1,4 @@
-FROM balenalib/raspberrypi4-64:sid
+FROM balenalib/armv7hf-alpine:3.15
 RUN install_packages wget && \
   wget https://dl.min.io/server/minio/release/linux-arm64/minio && \
   chmod +x minio

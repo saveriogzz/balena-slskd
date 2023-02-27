@@ -29,4 +29,6 @@ services:
       MINIO_ROOT_USER: admin
       MINIO_ROOT_PASSWORD: password
     entrypoint: sh
-    command: -c "mkdir -p /mnt/data/bucket && minio server /mnt/data --console-address ':9001'"
+    command: >
+      -c "mkdir -p /mnt/data/bucket
+      && minio server /mnt/data --console-address ':9001'"
